@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class Iter {
     public static void main(String[] args) {
-        Scanner src = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int[] people = new int[15];
         int age;
 
         for (int i = 0; i < people.length; i++) {
-            age = src.nextInt();
+            age = scan.nextInt();
             if (i != 0) {
                 for (int j = i; j > 0; j--) {
                     people[j] = Math.max(people[j - 1], age);
@@ -25,6 +25,6 @@ public class Iter {
             }
         }
         System.out.println("Tableau : " + Arrays.toString(people));
-        src.close();
+        scan.close();
     }
 }
